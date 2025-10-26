@@ -1,0 +1,15 @@
+[package]
+name = "test-runner"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["rlib"]
+
+[features]
+default = [] #do not take all features as default thing so currently default is empty - that means no features
+std = []
+
+
+[dependencies]
+static_cell = "2.1.1"
