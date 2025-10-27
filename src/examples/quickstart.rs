@@ -20,6 +20,7 @@ fn t_truth(_: &mut dyn Logger) -> Outcome {
     assert_true(4 < 10 - 3)
 }
 fn main() {
+    // logger as per stdout
     let mut log = HostLogger;
     let reg = REG_STORAGE.init(Registry::new());
     unsafe {
