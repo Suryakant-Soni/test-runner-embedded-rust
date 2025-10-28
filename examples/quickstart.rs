@@ -23,8 +23,6 @@ fn main() {
     // logger as per stdout
     let mut log = HostLogger;
     let reg = REG_STORAGE.init(Registry::new());
-    unsafe {
-        reg.register(test_case!("math:add", t_add)).ok();
-        reg.run_all(&mut log);
-    }
+    reg.register(test_case!("math:add", t_add)).ok();
+    reg.run_all(&mut log);
 }

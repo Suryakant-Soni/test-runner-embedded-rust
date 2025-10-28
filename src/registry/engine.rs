@@ -1,8 +1,8 @@
 use crate::logger::types::Logger;
 use crate::registry::types::{Outcome, TestCase};
 pub struct Registry<const N: usize> {
-    pub tests: [Option<TestCase>; N],
-    pub len: usize,
+    tests: [Option<TestCase>; N],
+    len: usize,
 }
 
 impl<const N: usize> Registry<N> {
