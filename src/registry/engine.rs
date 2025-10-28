@@ -28,9 +28,9 @@ impl<const N: usize> Registry<N> {
         for i in 0..self.len {
             let test = self.tests[i].as_ref().unwrap();
             log.log("RUN ");
-            log.log(test.name);
+            log.log(test.get_name());
             log.log(" ... ");
-            match (test.f)(log) {
+            match (test.get_f())(log) {
                 Outcome::Pass => log.log("ok\n"),
                 Outcome::Fail(m) => {
                     log.log("Fail\n");
