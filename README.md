@@ -25,3 +25,18 @@ Insights from project -
 3. using a declarative macro to easily register a new test case - test_case!
 4. kept attributes as private for Registry main object and test case object as well, using apis for construction and get
    attribute calls.
+5. using generics with function assert_eq_with where the function passed inside assert api is bound with FnOnce trait,
+   i.e. it can be called only once in function assert_eq_with after which the closure instance is
+   consumer and gives compiletime error when tried recalling as can be seen in the below image
+   ![img.png](img.png)
+6. you can use `cargo run --example quickstart` and create sample main process for running examples using library code.
+7. you can use parameter in Enums! when you return an enum value, you can also return a paramter with that enum value
+   like below
+   `pub enum Outcome {
+       Pass,
+       Fail(&'static str),
+       Error(&'static str),
+   }` fail and error enum values can also show messages.
+8. this is how you can ensure that standard library code is not linked to the binary and putting a condition that a
+   particular feature `std` should not be active
+   `#![cfg_attr(not(feature = "std"), no_std)]`
