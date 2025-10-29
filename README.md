@@ -27,7 +27,7 @@ Insights from project -
    attribute calls.
 5. using generics with function assert_eq_with where the function passed inside assert api is bound with FnOnce trait,
    i.e. it can be called only once in function assert_eq_with after which the closure instance is
-   consumer and gives compiletime error when tried recalling as can be seen in the below image
+   consumed and gives compiletime error when tried recalling as can be seen in the below image
    ![img.png](img.png)
 6. you can use `cargo run --example quickstart` and create sample main process for running examples using library code.
 7. you can use parameter in Enums! when you return an enum value, you can also return a paramter with that enum value
